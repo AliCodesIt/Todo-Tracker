@@ -58,28 +58,3 @@ body{
   width: 150px;
   padding-left: 15px;
 }
-
-@media(max-width: 768px) {
-  .App{
-    width: 768px;
-  }
-  .Header__Top{
-    display: flex;
-    justify-content: space-between;
-    width: 510px;
-    padding-left: 15px;
-    margin-right: auto;
-  }
-  .Container{
-    margin-right: auto;
-    width: 480px;
-    height: auto;
-    margin-left: 10px;
-  }
-  .Container__Top{
-    width: 480px;
-  }
-  body{
-    overflow-x: hidden;
-  }
-}

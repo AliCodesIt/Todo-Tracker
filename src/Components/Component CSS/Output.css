@@ -47,11 +47,3 @@
 .Edit{
     font-size: 100px;
 }
-@media (max-width: 768px) {
-    .Output{
-        width: 450px;
-    }
-    .Edittext{
-        width: 340px;
-    }
-}
