@@ -66,17 +66,17 @@ body{
   .Header__Top{
     display: flex;
     justify-content: space-between;
-    width: 630px;
-    padding-left: 20px;
+    width: 400px;
+    padding-left: 15px;
     margin-right: auto;
   }
   .Container{
-    margin-right: 180px;
-    width: 600px;
+    margin-right: auto;
+    width: 370px;
     height: auto;
-    margin-left: 40px;
+    margin-left: 10px;
   }
   .Container__Top{
-    width: 600px;
+    width: 370px;
   }
 }

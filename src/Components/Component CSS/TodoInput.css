@@ -44,9 +44,9 @@
   }
   @media(max-width: 768px) {
     .Input{
-      width: 590px;
+      width: 350px;
     }
     .Input__Box{
-      width: 512px;
+      width: 270px;
     }
   }

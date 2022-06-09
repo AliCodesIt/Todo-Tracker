@@ -49,9 +49,9 @@
 }
 @media (max-width: 768px) {
     .Output{
-        width: 570px;
+        width: 350px;
     }
     .Edittext{
-        width: 445px;
+        width: 240px;
     }
 }
