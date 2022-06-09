@@ -1,0 +1,52 @@
+.Input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191E31;
+    width: 521px;
+    margin: auto;
+    height: 54px;
+    margin-top: 20px;
+    border: 1px solid #4F5572;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  .Input__Box{
+    width: 441px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #2F80ED;
+  }
+  .Input__Box::placeholder{
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .Input__Button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    background-color: #2F80ED;
+    border-radius: 4px;
+  }
+  .Btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  @media(max-width: 768px) {
+    .Input{
+      width: 590px;
+    }
+    .Input__Box{
+      width: 512px;
+    }
+  }

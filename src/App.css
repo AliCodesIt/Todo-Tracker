@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background-color: #191e31;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  background-image: url(./Images/bg.png);
+  width: 100vw;
+  height: 395px;
+}
+.Header{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding-top: 120px;
+ color: white;
+}
+.Header__Top{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 567px;
+}
+.Container{
+  width: 545px;
+  height: auto;
+  background-color: #272C42;
+  margin-right: 20px;
+  border-radius: 5px;
+  padding-bottom: 40px;
+}
+.Container__Top{
+  width: 545px;
+  height: 70px;
+  background-color: #191e31;
+  display: flex;
+  align-items: center;
+}
+#Todo{
+  font-size: 38px;
+  font-family: "Poppins";
+  color: #FFFF;
 }
 
-.App-link {
-  color: #61dafb;
+.Todo__Number{
+  color: #535A7C;
+  font-size: 14px;
+  font-family: "Poppins";
+  width: 150px;
+  padding-left: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width: 768px) {
+  .App{
+    width: 768px;
   }
-  to {
-    transform: rotate(360deg);
+  .Header__Top{
+    display: flex;
+    justify-content: space-between;
+    width: 630px;
+    padding-left: 20px;
+    margin-right: auto;
+  }
+  .Container{
+    margin-right: 180px;
+    width: 600px;
+    height: auto;
+    margin-left: 40px;
+  }
+  .Container__Top{
+    width: 600px;
   }
 }
