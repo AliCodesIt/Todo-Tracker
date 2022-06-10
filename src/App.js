@@ -7,14 +7,12 @@ import Output from './Components/Output';
 
 function App() {
   const [todo, setTodo] = useState([])
-  const [count, setCount] = useState(0)
-  const [completecount, setCompletecount] = useState(0)
+  const [alltodo, setAlltodo] = useState([])
 
   const Addtodo = (Todo) => {
-    setTodo(() => {
-      const newArr = [...todo, {value:Todo,completed:false}]
-      return newArr
-    })
+    const newList = [...alltodo, { value: Todo, completed: false }]
+    setTodo(newList)
+    setAlltodo(newList)
   }
 
   const DeleteTodo = (index) => {
@@ -22,9 +20,9 @@ function App() {
         const newArr = todo.filter((todo, id) => {
           return index != id
         });
-        return newArr
+        setTodo(newArr)
+        setAlltodo(newArr)
       })
-      setCount(count - 1)
   }
 
   const editTodo = (index, currenttext) => {
@@ -35,34 +33,35 @@ function App() {
           }
           return todo
         })
-        return newArr
+        setTodo(newArr)
+      setAlltodo(newArr)
       })
   }
 
   const completeTodo = (index, completedState) => {
-    setTodo(()=> {
-      const newArr = todo.map((todo, id) => {
+      const newArr = alltodo.map((todo, id) => {
         if (id === index) {
           return {...todo,completed:completedState}
         }
         return todo
       })
-      return newArr
-    })
-}
-const completedNumber = () => {
-  setCount(count + 1)
+      setTodo(newArr)
+      setAlltodo(newArr)
 }
 
-const completethecount = () => {
-  setCompletecount(completecount + 1)
-}
-const minusthecount = () => {
-  setCompletecount(completecount - 1)
+const sortByActive = () => {
+  const newArr = alltodo.filter((todo, id) => todo.completed === false )
+  setTodo(newArr)
 }
 
-const all = count
-const completedCount = completecount
+const sortByCompleted = () => {
+  const newArr = alltodo.filter((todo, id) => todo.completed === true )
+  setTodo(newArr)
+}
+
+const sortByAll = () => {
+  setTodo(alltodo)
+}
 
 
   return (
@@ -78,10 +77,10 @@ const completedCount = completecount
       </div>
     <div className='Container' >
         <div className='Container__Top' >
-           <ContainerInfo All={all} Active={all} Completed={completedCount} />
+           <ContainerInfo todo={alltodo} sortByActive={sortByActive} sortByCompleted={sortByCompleted} sortByAll={sortByAll} />
         </div>
-        <TodoInput Todo={Addtodo} Completed={completedNumber} />
-        <p className='Todo__Number'> {count} Todo's Found </p>
+        <TodoInput Todo={Addtodo}/>
+        <p className='Todo__Number'> {todo.length} Todo's Found </p>
         {
           todo.map(({value,completed}, index) => {
             return(

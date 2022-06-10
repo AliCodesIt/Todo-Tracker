@@ -58,3 +58,16 @@ body{
   width: 150px;
   padding-left: 15px;
 }
+
+@media screen and (max-width: 595px) {
+  .Header__Top {
+    width: 92%;
+  }
+  .Container {
+    width: 92%;
+    margin-right: 0;
+  }
+  .Container__Top {
+    width: 100%;
+  }
+}

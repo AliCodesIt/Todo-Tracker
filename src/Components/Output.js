@@ -71,7 +71,7 @@ function Output({Todo, Delete, editTodo, id,completed,completeTodo, Completenumb
                 </p>
             </div>
         </div>)}
-    </div>
+    </div> 
   )
 }
 

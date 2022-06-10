@@ -17,7 +17,6 @@ function TodoInput({Todo, Completed}) {
     }
     Todo(todo.trim())
     setTodo("")
-    Completed()
   }
 
   return (
@@ -35,6 +34,6 @@ function TodoInput({Todo, Completed}) {
     </div>
   </div>
   )
-}
+} 
  
 export default TodoInput
