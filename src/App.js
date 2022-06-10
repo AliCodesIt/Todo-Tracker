@@ -16,13 +16,11 @@ function App() {
   }
 
   const DeleteTodo = (index) => {
-      setTodo(() => {
-        const newArr = todo.filter((todo, id) => {
+        const newArr = alltodo.filter((todo, id) => {
           return index != id
         });
         setTodo(newArr)
         setAlltodo(newArr)
-      })
   }
 
   const editTodo = (index, currenttext) => {

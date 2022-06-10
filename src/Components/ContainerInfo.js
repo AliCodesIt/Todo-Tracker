@@ -17,7 +17,6 @@ function ContainerInfo({todo, sortByActive, sortByCompleted, sortByAll}) {
     <div className='Container__Text' onClick={sortByCompleted} >
         <p>Completed</p>
         <p className='Circle' > 
-          {" "}
           {todo.filter((item) => item.completed === true).length}
          </p>
     </div>
